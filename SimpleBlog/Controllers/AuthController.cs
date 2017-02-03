@@ -12,6 +12,12 @@ namespace SimpleBlog.Controllers
 {
     public class AuthController : Controller
     {
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToRoute("home");
+        }
+
         //Get request go in to this method.
         public ActionResult Login()
         {
@@ -33,6 +39,8 @@ namespace SimpleBlog.Controllers
 
             if (!string.IsNullOrWhiteSpace(returnUrl))
                 return Redirect(returnUrl);
+
+            //return Content("This is valid!");
 
             return RedirectToRoute("home");
         }
