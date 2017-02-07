@@ -18,12 +18,17 @@ namespace SimpleBlog.Controllers
             return RedirectToRoute("home");
         }
 
+
+
+
         //Get request go in to this method.
         public ActionResult Login()
         {
             return View(new AuthLogin
             { });
         }
+
+
 
 
         //Post request go into this method. 

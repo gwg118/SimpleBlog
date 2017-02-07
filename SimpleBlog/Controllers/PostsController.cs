@@ -11,6 +11,7 @@ namespace SimpleBlog.Controllers
         public ActionResult Index()
         {
             return View();
+            //return Content("ADMIN POSTS!");
         }
     }
 }
